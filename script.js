@@ -6,6 +6,8 @@ let span = document.querySelector('.robotyczne');
 let scrollDown = document.querySelector(".icon-angle-double-down")
 let ab = document.querySelector(".ab")
 let bef = document.getElementsByClassName("bef")
+const anim = document.getElementsByClassName("anim")
+let desc = document.getElementsByClassName("desc")
 
 button[0].addEventListener('click', ()=>{
     button[0].classList.toggle("hamburger-active")
@@ -49,17 +51,37 @@ kropki.forEach(kropka => {
 scrollDown.addEventListener('click', ()=>{
   document.getElementById('ab').scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
+if(window.innerWidth>700){
+  document.addEventListener("scroll",()=>{
+    i=window.scrollY*0.75;
+    let under = document.querySelector(".under")
+    ab.style.transform = `translateX(${i}px)`;
+    let x = i*2
+    under.style.transform = `translateX(-${x}px)`;
+    if(i/10<80)
+      ab.style.opacity = `${i*5}%`
+    ab.style.setProperty('--procent', `${i}%`);
+  })
+}else{
+  document.addEventListener("scroll",()=>{
+    i=window.scrollY*0.2;
+    let under = document.querySelector(".under")
+    ab.style.transform = `translateX(${i}px)`;
+    let x = i*2
+    under.style.transform = `translateX(-${x}px)`;
+    if(i/10<80)
+      ab.style.opacity = `${i*5}%`
+    ab.style.setProperty('--procent', `${i}%`);
+  })
+}
 document.addEventListener("scroll",()=>{
-  i=window.scrollY*0.75;
-  let under = document.querySelector(".under")
-  ab.style.transform = `translateX(${i}px)`;
-  let x = i*2
-  under.style.transform = `translateX(-${x}px)`;
-  if(i/10<80)
-    ab.style.opacity = `${i*5}%`
-  ab.style.setProperty('--procent', `${i}%`); // Ustaw zmienną w CSS
-  
-
+  const scrollTop = window.scrollY;
+  setTimeout(()=>{
+    anim[0].style.transform = `translateY(${scrollTop * 0.5}px)`;
+  },100)
+  setTimeout(()=>{
+    anim[1].style.transform = `translateY(${scrollTop * 0.5}px)`;
+  },300)
 })
 
 
@@ -69,6 +91,7 @@ let animationInProgress = false;
 let animationTimeout;
 let animationInProgress2 = false;
 let animationTimeout2;
+
 
 function typeWriter(text, i) {
     if (i < text.length && animationInProgress) {
