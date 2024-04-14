@@ -61,10 +61,17 @@ if(window.innerWidth>700){
     if(i/10<80)
       ab.style.opacity = `${i*5}%`
     ab.style.setProperty('--procent', `${i}%`);
+    const scrollTop = window.scrollY;
+  setTimeout(()=>{
+    anim[0].style.transform = `translateY(${scrollTop * 0.5}px)`;
+  },100)
+  setTimeout(()=>{
+    anim[1].style.transform = `translateY(${scrollTop * 0.5}px)`;
+  },300)
   })
 }else{
   document.addEventListener("scroll",()=>{
-    i=window.scrollY*0.2;
+    i=window.scrollY*0.1;
     let under = document.querySelector(".under")
     ab.style.transform = `translateX(${i}px)`;
     let x = i*2
@@ -72,16 +79,17 @@ if(window.innerWidth>700){
     if(i/10<80)
       ab.style.opacity = `${i*5}%`
     ab.style.setProperty('--procent', `${i}%`);
+    const scrollTop = window.scrollY;
+  setTimeout(()=>{
+    anim[0].style.transform = `translateY(${scrollTop * 0.35}px)`;
+  },100)
+  setTimeout(()=>{
+    anim[1].style.transform = `translateY(${scrollTop * 0.35}px)`;
+  },300)
   })
 }
 document.addEventListener("scroll",()=>{
-  const scrollTop = window.scrollY;
-  setTimeout(()=>{
-    anim[0].style.transform = `translateY(${scrollTop * 0.5}px)`;
-  },100)
-  setTimeout(()=>{
-    anim[1].style.transform = `translateY(${scrollTop * 0.5}px)`;
-  },300)
+  
 })
 
 

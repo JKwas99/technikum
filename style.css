@@ -267,7 +267,6 @@ body{
 }
 .bef{
     background: rgb(255,201,74);
-    background: linear-gradient(184deg, rgba(255,201,74,0.5) 23%, rgba(255,201,74,0.5) 100%);
     overflow: hidden!important;
     position: relative;
 }
