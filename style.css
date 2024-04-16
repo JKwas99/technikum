@@ -55,6 +55,7 @@ body{
 .icon-angle-double-down:hover{
     background-color: #FFC94A;
     color: #101112;
+    opacity: 0%;
     transition: all .3s linear;
 }
 @keyframes arrow {
@@ -178,7 +179,7 @@ body{
 }
 .icon-angle-double-down:hover::after{
     transition: all .3s linear;
-    opacity: 100%;
+    opacity: 0%;
 }
 .main-box{
     display: block;
