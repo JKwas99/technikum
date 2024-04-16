@@ -1,6 +1,7 @@
 let button = document.getElementsByClassName("hamburger")
 let sidebar = document.getElementsByClassName("menu-list")
 let logo_pic = document.getElementById("menu-logo")
+let list_item = document.getElementsByClassName("list-item")
 let element = document.querySelector('.moreAboutUs');
 let span = document.querySelector('.robotyczne');
 let scrollDown = document.querySelector(".icon-angle-double-down")
@@ -11,13 +12,71 @@ let desc = document.getElementsByClassName("desc")
 let mainBox = document.getElementsByClassName("main-box")
 let aboutUs = document.getElementsByClassName("aboutUs")
 
+
 button[0].addEventListener('click', ()=>{
     button[0].classList.toggle("hamburger-active")
     sidebar[0].classList.toggle("list-active")
     logo_pic.classList.toggle("logo-active")
 })
 
-
+list_item[0].addEventListener('click', ()=>{
+    button[0].classList.toggle("hamburger-active")
+    sidebar[0].classList.toggle("list-active")
+    logo_pic.classList.toggle("logo-active")
+    for(let i=0;i<list_item.length;i++){
+      list_item[i].classList.remove("active-menu")
+    }
+    list_item[0].classList.add("active-menu")
+})
+list_item[1].addEventListener('click', ()=>{
+  button[0].classList.toggle("hamburger-active")
+  sidebar[0].classList.toggle("list-active")
+  logo_pic.classList.toggle("logo-active")
+  for(let i=0;i<list_item.length;i++){
+    list_item[i].classList.remove("active-menu")
+  }
+  list_item[1].classList.add("active-menu")
+  setTimeout(() => {
+    list_item[0].classList.add("active-menu")
+    list_item[1].classList.remove("active-menu")
+  }, 3000);
+})
+list_item[2].addEventListener('click', ()=>{
+  button[0].classList.toggle("hamburger-active")
+  sidebar[0].classList.toggle("list-active")
+  logo_pic.classList.toggle("logo-active")
+  for(let i=0;i<list_item.length;i++){
+    list_item[i].classList.remove("active-menu")
+  }
+  list_item[2].classList.add("active-menu")
+})
+list_item[3].addEventListener('click', ()=>{
+  button[0].classList.toggle("hamburger-active")
+  sidebar[0].classList.toggle("list-active")
+  logo_pic.classList.toggle("logo-active")
+  for(let i=0;i<list_item.length;i++){
+    list_item[i].classList.remove("active-menu")
+  }
+  list_item[3].classList.add("active-menu")
+})
+list_item[4].addEventListener('click', ()=>{
+  button[0].classList.toggle("hamburger-active")
+  sidebar[0].classList.toggle("list-active")
+  logo_pic.classList.toggle("logo-active")
+  for(let i=0;i<list_item.length;i++){
+    list_item[i].classList.remove("active-menu")
+  }
+  list_item[4].classList.add("active-menu")
+})
+list_item[5].addEventListener('click', ()=>{
+  button[0].classList.toggle("hamburger-active")
+  sidebar[0].classList.toggle("list-active")
+  logo_pic.classList.toggle("logo-active")
+  for(let i=0;i<list_item.length;i++){
+    list_item[i].classList.remove("active-menu")
+  }
+  list_item[5].classList.add("active-menu")
+})
 
 for(let i=0;i<400;i++){
   const kropka = document.createElement('span');
