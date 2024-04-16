@@ -33,6 +33,7 @@ body{
 }
 .icon-angle-double-down{
     display: none!important;
+    opacity: 0;
     position: absolute;
     left: calc(50% - 26px);
     bottom: 50px;
