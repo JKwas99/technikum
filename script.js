@@ -8,12 +8,16 @@ let ab = document.querySelector(".ab")
 let bef = document.getElementsByClassName("bef")
 const anim = document.getElementsByClassName("anim")
 let desc = document.getElementsByClassName("desc")
+let mainBox = document.getElementsByClassName("main-box")
+let aboutUs = document.getElementsByClassName("aboutUs")
 
 button[0].addEventListener('click', ()=>{
     button[0].classList.toggle("hamburger-active")
     sidebar[0].classList.toggle("list-active")
     logo_pic.classList.toggle("logo-active")
 })
+
+
 
 for(let i=0;i<400;i++){
   const kropka = document.createElement('span');
@@ -48,48 +52,128 @@ kropki.forEach(kropka => {
 });
 });
 
-scrollDown.addEventListener('click', ()=>{
+element.addEventListener('click', ()=>{
   document.getElementById('ab').scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
+
+const movingDiv = document.getElementById('ab');
+let under = document.querySelector(".under")
+
+function calculateTranslateX(scrollPercent) {
+  // Domyślna pozycja X (na początku przewijania strony)
+  let translateX = 0;
+  translateX = 0 + (scrollPercent * 6); // Zmniejszamy przesunięcie w stosunku do procentu przewinięcia strony
+
+  return translateX;
+}
+
+function calculateTranslateXForSpan(scrollPercent) {
+  // Domyślna pozycja X dla span (na początku przewijania strony)
+  let translateX = 0;
+
+  // Jeśli przewinięcie strony przekracza 50%, ustawić pozycję X dla span na -100px (na lewo)
+  if (scrollPercent >= 50) {
+    translateX = -100;
+  } else {
+    // Oblicz pozycję X dla span na podstawie procentowego przewinięcia strony
+    translateX = -100 * ((50 - scrollPercent) / 50); // Zmniejszamy przesunięcie w stosunku do procentu przewinięcia strony
+  }
+
+  return translateX;
+}
+
+// Nasłuchuj zdarzenie przewijania strony
+window.addEventListener('scroll', () => {
+  // Pobierz aktualną pozycję przewijania strony w dół
+  const scrollTop = window.scrollY || window.pageYOffset;
+
+
+  // Oblicz procent przewinięcia strony w dół
+  const scrollHeight = window.innerHeight;
+  const scrollPercent = (scrollTop / scrollHeight) * 100;
+  console.log(scrollPercent)
+  // Oblicz pozycję docelową na osi X
+  const translateX = calculateTranslateX(scrollPercent);
+  ab.style.opacity = `${translateX}%`
+
+  // Ustaw styl transformacji dla elementu DIV
+  if(window.innerWidth>700){
+    ab.style.transform = `translateX(${translateX}px)`;
+    let x = translateX*2
+    under.style.transform = `translateX(-${x}px)`;
+  }
+  else{
+    ab.style.transform = `translateX(${translateX/5}px)`;
+    let x = translateX/4
+    under.style.transform = `translateX(-${x}px)`;
+  }
+
+
+  
+
+});
+document.addEventListener("scroll",()=>{
+  const scrollTop = window.scrollY;
+  if(window.scrollY>mainBox[0].clientHeight+aboutUs[0].clientHeight-200){
+    let innowacje = document.getElementsByClassName("innowacjeInfo")
+    let innowacje2 = document.getElementsByClassName("innoText")
+    let lista = document.getElementsByClassName("innoList")
+    innowacje[0].style.transition= `all 2s linear`;
+    innowacje[0].style.opacity = `100%`;
+    innowacje2[0].style.transition= `all 1s linear`;
+    innowacje2[0].style.opacity = `100%`;
+    lista[0].style.transition= `all 1s linear`;
+    lista[0].style.opacity = `100%`;
+
+  }
+})
+
 if(window.innerWidth>700){
   document.addEventListener("scroll",()=>{
-    i=window.scrollY*0.75;
-    let under = document.querySelector(".under")
-    ab.style.transform = `translateX(${i}px)`;
-    let x = i*2
-    under.style.transform = `translateX(-${x}px)`;
-    if(i/10<80)
-      ab.style.opacity = `${i*5}%`
-    ab.style.setProperty('--procent', `${i}%`);
     const scrollTop = window.scrollY;
-  setTimeout(()=>{
-    anim[0].style.transform = `translateY(${scrollTop * 0.5}px)`;
-  },100)
-  setTimeout(()=>{
-    anim[1].style.transform = `translateY(${scrollTop * 0.5}px)`;
-  },300)
+    setTimeout(()=>{
+      if(scrollTop<mainBox[0].clientHeight+anim[0].clientHeight+70)
+        anim[0].style.transform = `translateY(${scrollTop * 0.5}px)`;
+    },100)
+    setTimeout(()=>{
+      if(scrollTop<mainBox[0].clientHeight+anim[1].clientHeight+70)
+        anim[1].style.transform = `translateY(${scrollTop * 0.5}px)`;
+    },300)
   })
 }else{
   document.addEventListener("scroll",()=>{
-    i=window.scrollY*0.1;
-    let under = document.querySelector(".under")
-    ab.style.transform = `translateX(${i}px)`;
-    let x = i*2
-    under.style.transform = `translateX(-${x}px)`;
-    if(i/10<80)
-      ab.style.opacity = `${i*5}%`
-    ab.style.setProperty('--procent', `${i}%`);
     const scrollTop = window.scrollY;
+    console.log(mainBox[0].clientHeight)
   setTimeout(()=>{
-    anim[0].style.transform = `translateY(${scrollTop * 0.35}px)`;
+    if(scrollTop<mainBox[0].clientHeight+anim[0].clientHeight+50)
+      anim[0].style.transform = `translateY(${scrollTop * 0.5}px)`;
   },100)
   setTimeout(()=>{
-    anim[1].style.transform = `translateY(${scrollTop * 0.35}px)`;
+    if(scrollTop<mainBox[0].clientHeight+anim[1].clientHeight+50)
+      anim[1].style.transform = `translateY(${scrollTop * 0.5}px)`;
   },300)
   })
 }
-document.addEventListener("scroll",()=>{
-  
+
+desc[0].addEventListener("click", ()=>{
+  let desc = document.getElementsByClassName("desc")
+  let inf = document.getElementsByClassName("inf")
+  let przed = document.getElementsByClassName("przed")
+
+  console.log("kliknieto")
+  desc[0].classList.toggle("descVis")
+  inf[0].classList.toggle("infVis")
+  przed[0].classList.toggle("przedVis")
+})
+
+desc[1].addEventListener("click", ()=>{
+  let desc = document.getElementsByClassName("desc")
+  let inf = document.getElementsByClassName("inf")
+  let przed = document.getElementsByClassName("przed")
+
+  desc[1].classList.toggle("descVis")
+  inf[1].classList.toggle("infVis")
+  przed[1].classList.toggle("przedVis")
 })
 
 

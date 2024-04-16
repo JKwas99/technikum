@@ -17,8 +17,22 @@ body{
     font-family: "Reem Kufi Fun", sans-serif;
     color: #FFF7FC;
 }
-
+.innowacjeInfo{
+    opacity: 0;
+}
+.innoText{
+    opacity: 0;
+}
+.innoText{
+    color: #EEF5FF;
+}
+.innowacje{
+    width: 100vw;
+    height: 80vh;
+    margin-top: 100px;
+}
 .icon-angle-double-down{
+    display: none!important;
     position: absolute;
     left: calc(50% - 26px);
     bottom: 50px;
@@ -33,6 +47,9 @@ body{
     animation: arrow;
     animation-duration: 2s;
     animation-iteration-count: infinite;
+}
+.kierunki{
+    text-align: center;
 }
 .icon-angle-double-down:hover{
     background-color: #FFC94A;
@@ -65,9 +82,6 @@ body{
     color: #FFC94A;
     z-index: 5;
     opacity: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     transition: opacity .5s linear;
     font-size: 1.2vw;
     cursor: pointer;
@@ -94,6 +108,19 @@ body{
     color: #EEF5FF;
     margin: 0px 20px;
     font-size: 1.2vw;
+    text-align: center!important;
+}
+.przedVis{
+    opacity: 100%!important;
+}
+.przedVis{
+    opacity: 100%!important;
+}
+.infVis{
+    opacity: 100%!important;
+}
+.descVis{
+    opacity: 100%!important;
 }
 .desc{
     opacity: 0%;
@@ -105,7 +132,7 @@ body{
     font-size: 1.3vw;
     box-sizing: border-box;
     text-align: center;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,0.9);
     left: 0px;
     letter-spacing: 1px;
     z-index: 5;
@@ -159,6 +186,7 @@ body{
 }
 .video{
     width: 100vw;
+    filter: grayscale(100%);
     height: 100vh;
     position: absolute;
     top: 0;
@@ -235,7 +263,7 @@ body{
     }
 }
 .bef:nth-child(odd) h3{
-    text-align: left;
+    text-align: right;
 }
 .bef h3{
     transition: all .1s linear;
@@ -387,6 +415,77 @@ header>div>ul>a:hover{
 }
 }
 @media (min-width:250px) and (max-width:600px){
+    .przed{
+        white-space: pre-wrap;
+        position: absolute;
+        left: 0px;
+        text-align: center;
+        width: 100%;
+        bottom: 30px;
+        font-weight: 800;
+        color: #FFC94A;
+        z-index: 5;
+        opacity: 0;
+        transition: opacity .5s linear;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    .inf{
+        position: absolute;
+        left: 50px;
+        bottom: 100px;
+        font-weight: 800;
+        color: #FFC94A;
+        z-index: 5;
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: opacity .5s linear;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    .if{
+        color: #FF204E;
+    }
+    .inf>div>p{
+        color: #EEF5FF;
+        margin: 0px 5px;
+        text-align: left;
+        font-size: 12px;
+    }
+    .przedVis{
+        opacity: 100%;
+    }
+    .infVis{
+        opacity: 100%;
+    }
+    .descVis{
+        opacity: 100%;
+    }
+    .desc{
+        opacity: 0%;
+        z-index: 5;
+        width: 100%;
+        height: 100%;
+        transition: opacity .5s linear;
+        color: #EEF5FF;
+        font-size: 16.5px;
+        box-sizing: border-box;
+        text-align: center;
+        background-color: rgba(0,0,0,0.8);
+        left: 0px;
+        letter-spacing: 1px;
+        z-index: 5;
+        font-family: "Kanit", sans-serif;
+        font-weight: bold;
+        margin: 0px 0px;
+        overflow-x: visible!important;
+        padding: 12% 3%;
+        position: absolute;
+        -webkit-text-stroke: width color;
+        top: 0px;
+    }
     .bef h3{
         font-size: 10vw;
     }
@@ -436,6 +535,7 @@ header>div>ul>a:hover{
         width: 100vw;
         height: 100vh;
         position: absolute;
+        filter: grayscale(100%);
         top: 0;
         left: 0;
         margin-left: auto;
@@ -573,7 +673,123 @@ header>div>ul>a:hover{
     }
 
 }
-@media (min-width:841px){
+@media(min-width:841px){
+    .innoList{
+        position: absolute;
+        left: 0px;
+        opacity: 0;
+        bottom: 20px;
+        font-size: 15px;
+        color: #e2e1e1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        z-index: 5;
+    }
+    .innoList>a:hover{
+        color: #101112;
+        background-color: #FFC94A;
+        transition: all .1s linear;
+        z-index: 5;
+    }
+    .innoList>a{
+        display: block;
+        transition: all .1s linear;
+        margin: 20px;
+        color: #e2e1e1;
+        text-decoration: none;
+        z-index: 5;
+        position: relative;
+        padding: 0 5px;
+        border-left: 2px solid #FFC94A;
+    }
+    .innoList>a>li{
+        list-style-type: none;
+        z-index: 5;
+    }
+    .innowacje{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .innowacje>div{
+        width: 50%;
+        height: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .innowacje>div:nth-child(1){
+        transform: translateX(-5%);
+    }
+    .innowacje>div:nth-child(2){
+        box-sizing: border-box;
+        padding: 50px 0;
+        font-family: "Kanit", sans-serif;
+        letter-spacing: 0.8px;
+        transform: translateX(-12%);
+        background-image: linear-gradient(
+            -45deg, 
+            transparent 10%, 
+            #FF204E 10%, 
+            #FF204E 20%, 
+            transparent 20%, 
+            transparent 30%, 
+            #FF204E 30%, 
+            #FF204E 40%,
+            transparent 40%, 
+            transparent 50%,
+            #FF204E 50%, 
+            #FF204E 60%,
+            transparent 60%, 
+            transparent 70%,
+            #FF204E 70%, 
+            #FF204E 80%,
+            transparent 80%, 
+            transparent 90%,
+            #FF204E 90%
+            )
+    }
+    .innowacje>div:nth-child(2)>p{
+        padding: 30px 60px;
+        font-size: 16px;
+        width: 110%;
+        color: #e2e1e1;
+        background-color: rgb(10, 10,10);
+        border-top:2px solid #FF204E;
+        border-bottom:2px solid #FF204E;
+    }   
+    @keyframes r2{
+        0%{
+            transform: translate(0);
+        }
+        50%{
+            transform: translateX(100%);
+        }
+        100%{
+            transform: translate(0);
+        }
+    }
+    .under2{
+    width: 20%;
+    height: 2px;
+    display: block;
+    background-color: #FFC94A;
+    background-color: #FFC94A; 
+    animation: r2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;  
+    }
+    .cd{
+        font-size: 3vw;
+        text-align: left;
+        margin: 0;
+        padding: 49px 5%;
+        border-top:2px solid #FF204E;
+        border-bottom:2px solid #FF204E;
+    }
     .kierunki{
         display: flex;
         align-items: center;
@@ -584,10 +800,10 @@ header>div>ul>a:hover{
         height: 100vh;
         position: absolute;
         top: 0;
+        filter: grayscale(100%);
         right: 0;
         margin-left: auto;
         background: url(images/movie.gif) center/cover no-repeat;
-        border-bottom: 2px solid #FFC94A;
         clip-path: polygon(24% 0, 100% 0, 100% 100%, 0 100%);
         backface-visibility: hidden;
         opacity: 60%;
@@ -616,6 +832,36 @@ header>div>ul>a:hover{
 }
 
 @media (min-width: 1205px){
+    .innoList{
+        position: absolute;
+        left: 0px;
+        opacity: 0;
+        bottom: 20px;
+        font-size: 20px;
+        color: #e2e1e1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 5;
+        width: 100%;
+    }
+    .innoList>a{
+        margin: 20px;
+        z-index: 5;
+    }
+    .innowacje>div{
+        width: 50%;
+        height: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow-x: hidden;
+    }
+
+    .innowacje>div:nth-child(2)>p{
+        font-size: 24px;
+    }   
     .main-logo>span{
         font-size: 4rem;
     }
@@ -683,3 +929,6 @@ header>div>ul>a:hover{
 @media (min-width: 1390px){
 }
 
+.if2{
+    color: #FFC94A;
+}
