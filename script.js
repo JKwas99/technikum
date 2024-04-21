@@ -19,10 +19,20 @@ let innoP = document.getElementById("innoP")
 innoP.style.transform = `translateX(-40px)`;
 innoP.style.opacity = `0`;
 
+let tok = document.getElementById("tok")
+let tik = document.getElementById("tik")
+
+tok.addEventListener("mouseover", ()=>{
+    tik.src = "images/tiktok2.svg"
+})
+tok.addEventListener("mouseleave", ()=>{
+    tik.src = "images/tiktok.svg"
+})
+
 let posty = [
-    `<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FTechnikumNewTechnologywZamosciu%2Fposts%2Fpfbid02RJ3WiEJjEVY69Ei3pdGFEHVvRRoRvtXELT9iKFu2689XcNThgXuYFdKEogGjSEFAl&show_text=true&width=500&is_preview=true" width="500" height="700" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>`,
-    `<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FTechnikumNewTechnologywZamosciu%2Fposts%2Fpfbid0G3w3zZDFJKTpAiQRLNXs3biosp1x6xghNMRNL5rjptbvVxEY7pQqD7KHiw82qbQGl&show_text=true&width=500&is_preview=true" width="500" height="700" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>`,
-    `<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FTechnikumNewTechnologywZamosciu%2Fposts%2Fpfbid02qJoPcrSYjMNuGpVpp3PbdpGUNpmfm5NKvdBWsMAaeAFwnkZbwSPerT4Nq6Wpa7ZEl&show_text=true&width=500&is_preview=true" width="500"height="700"  style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>`
+    `<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FTechnikumNewTechnologywZamosciu%2Fposts%2Fpfbid02RJ3WiEJjEVY69Ei3pdGFEHVvRRoRvtXELT9iKFu2689XcNThgXuYFdKEogGjSEFAl&show_text=true&width=500&is_preview=true" width="500" height="800" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>`,
+    `<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FTechnikumNewTechnologywZamosciu%2Fposts%2Fpfbid0G3w3zZDFJKTpAiQRLNXs3biosp1x6xghNMRNL5rjptbvVxEY7pQqD7KHiw82qbQGl&show_text=true&width=500&is_preview=true" width="500" height="800" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>`,
+    `<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FTechnikumNewTechnologywZamosciu%2Fposts%2Fpfbid02qJoPcrSYjMNuGpVpp3PbdpGUNpmfm5NKvdBWsMAaeAFwnkZbwSPerT4Nq6Wpa7ZEl&show_text=true&width=500&is_preview=true" width="500"height="800"  style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>`
   ];
   
   let aktualnosciFB = document.querySelector(".aktualnosciFB"); 
@@ -51,13 +61,6 @@ let posty = [
     animateSlide('right');
   });
   
-  function animateSlide(direction) {
-    aktualnosciFB.classList.add('slide-' + direction);
-    
-    setTimeout(function() {
-      aktualnosciFB.classList.remove('slide-' + direction);
-    }, 10);
-  }
   
 
 window.addEventListener('scroll', ()=>{

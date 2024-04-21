@@ -1078,8 +1078,8 @@ header{
     }
     .media>div{
         width: 50%;
-        margin: 50px 50px;
-        padding: 0 50px 0 0;
+        margin: 50px 0px 50px 0;
+        padding: 20px 50px 0 50px;
     }
     .media>div:first-child{
         border-right: 2px solid #00eeff;
@@ -1092,18 +1092,89 @@ header{
         overflow: hidden;
         display: inline-block;
       }
-      
-      .slide-left {
-        transform: translateX(50%);
-      }
-      
-      .slide-right {
-        transform: translateX(-50%);
-      }
+    .social>h4::before{
+        content: '';
+        width: 120px;
+        height: 2px;
+        background-color: #cf04be;
+        position: absolute;
+        top: -10px;
+        left: 20px;
+        animation: more2;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+    .social>h4::after{
+        animation: more;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        content: '';
+        width: 120px;
+        height: 2px;
+        background-color: #00ff37;
+        position: absolute;
+        bottom: -20px;
+        right: 20px;
+    }
+    @keyframes more2 {
+        0%{
+            width: 120px;
+        }
+        50%{
+            width: 250px;
+        }
+        100%{
+            width: 120px;
+        }
+    }
+    @keyframes more {
+        0%{
+            width: 120px;
+        }
+        50%{
+            width: 200px;
+        }
+        100%{
+            width: 120px;
+        }
+    }
     .social>h4{
         font-size: 3em;
+        color: #FFF7FC;
+        text-align: center;
+        position: relative;
     }
     .mediaSoc{
         color: #cf04be;
+    }
+    .mediaSocial{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .mediaSocial>a{
+        text-align: center;
+        width: 25%;
+        height: 200px;
+        color: rgb(255, 247, 252);
+        text-decoration: none;
+        margin: 5px;
+    }
+    .mediaSocial>a:hover{
+        color: rgb(0, 238, 255);
+        cursor: pointer;
+    }
+    .mediaSocial>a>img{
+        height: 140px;
+        margin: 10px;
+    }
+    .mediaSocial>a>i{
+        font-size: 7em;
+        height: 140px;
+        text-align: center;
+    }
+    .mediaSocial>a>p{
+        margin: 5px;
+        font-size: 25px;
     }
 }
