@@ -19,6 +19,7 @@ body{
     background: linear-gradient(45deg, rgba(15,15,15,1) 23%, rgba(12,12,12,1) 100%);
     font-family: "Reem Kufi Fun", sans-serif;
     color: #F6F5F2;
+    box-sizing: border-box;
 }
 ::-webkit-scrollbar {
     width: 8px;
@@ -68,7 +69,7 @@ body{
     font-weight: bold;
 }
 .important2{
-    color: #00ff37;
+    color: rgb(0, 255, 55);
     font-weight: bold;
 }
 .ip3{
@@ -864,5 +865,245 @@ header{
         left: -10px;
         top: -10px;
         border:2px solid #cf04be;
+    }
+    .kompetencje{
+        margin-top: 10vh;
+        width: 100vw;
+        background-image: radial-gradient(#00ff37, 1px, transparent 0);
+        background-size: 40px 40px;
+        background-position: -19px -19px;
+        height: 60vh;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .kompetencje>div>h4{
+        font-size: 3em;
+        display: inline-block;
+        color: #cf04be;
+        position: relative;
+        margin: 20px 10px 10px 0px;
+    }
+    .kompetencje>div>p{
+        font-size: 19px;
+        color: #b4b2b2;
+    }
+    .kompetencje>div>h4::after{
+        content: 'Kompetencje Przyszłości';
+        color: #FFF7FC;
+        position: absolute;
+        top: -4px;
+        left: -4px;
+    }
+    .kompetencje>div{
+        width: 40%;
+        margin: 30px;
+    }
+    .moveBox{
+        position: relative;
+        transform: translateX(150px);
+        background-color: rgb(15,15,15);
+        padding: 30px 0px 30px 50px;
+        border-left:2px solid #00ff37 ;
+    }
+
+    @keyframes span3{
+        0% {
+            transform: translate(0, 0);
+        }
+        50% {
+            transform: translate(-5px, 0px);
+        }
+        100% {
+            transform: translate(0, 0);
+        }
+    }
+    @keyframes span4{
+        0% {
+            transform: translate(0, 0);
+        }
+        50% {
+            transform: translate(5px, 0px);
+        }
+        100% {
+            transform: translate(0, 0);
+        }
+    }
+    .moveBox>span:nth-child(1)::before{
+        content: '';
+        background-color: #cf04be;
+    }
+    .moveBox>span:nth-child(2)::before{
+        content: '';
+        background-color: #ED9455;
+    }
+    .moveBox>span:nth-child(3)::before{
+        content: '';
+        background-color: #d0ff00;
+    }
+    .moveBox>span:nth-child(4)::before{
+        content: '';
+        background-color: #2000d6;
+    }
+    .moveBox>span:nth-child(5)::before{
+        content: '';
+        background-color: #00eeff;
+    }
+    .moveBox>span:nth-child(6)::before{
+        content: '';
+        background-color: #ff0101;
+    }
+    .moveBox>span:nth-child(7)::before{
+        content: '';
+        background-color: #6201ff;
+    }
+    .moveBox>span::before{
+        content: '';
+        width: 30px;
+        border-radius: 50%;
+        left: -40px;
+        top: 0;
+        height: 30px;
+        position: absolute;
+    }
+    .moveBox>span:hover{
+        box-sizing: border-box;
+        color: #00eeff;
+        transition: all .3s linear;
+        cursor: pointer;
+    }
+    .moveBox>span{
+        display: block;
+        font-size: 22px;
+        transition: all .3s linear;
+        position: relative;
+        margin: 15px 10px;
+        transition: transform 0.5s ease-in-out;
+        color: #fcf9f9;
+    }
+    .aktualnosci{
+        position: relative;
+        text-align: center;
+        background-image: linear-gradient(
+        -45deg, 
+        transparent 5%, 
+        rgba(59,59,59,1) 5%, 
+        rgba(59,59,59,1) 10%, 
+        transparent 10%, 
+        transparent 15%, 
+        rgb(59, 59, 59) 15%, 
+        rgba(59,59,59,1) 20%,
+        transparent 20%, 
+        transparent 25%,
+        rgba(59,59,59,1) 25%, 
+        rgba(59,59,59,1) 30%,
+        transparent 30%, 
+        transparent 35%,
+        rgb(59, 59, 59) 35%, 
+        rgba(59,59,59,1) 40%,
+        transparent 40%, 
+        transparent 45%,
+        rgba(59,59,59,1) 45%, 
+        rgba(59,59,59,1) 50%,
+        transparent 50%, 
+        transparent 55%, 
+        rgb(59, 59, 59) 55%, 
+        rgba(59,59,59,1) 60%,
+        transparent 60%, 
+        transparent 65%,
+        rgba(59,59,59,1) 65%, 
+        rgba(59,59,59,1) 70%,
+        transparent 70%, 
+        transparent 75%, 
+        rgb(59, 59, 59) 75%, 
+        rgba(59,59,59,1) 80%,
+        transparent 80%, 
+        transparent 85%,
+        rgba(59,59,59,1) 85%, 
+        rgba(59,59,59,1) 90%,
+        transparent 90%, 
+        transparent 95%, 
+        rgb(59, 59, 59) 95%, 
+        rgba(59,59,59,1) 100%
+        )
+    }
+    .aktualnosci>h4::after{
+        content: "Aktualności";
+        text-align: left;
+        left: 0;
+        top: 0;
+        margin: 10px;
+        position: absolute;
+        padding: 5px 10px;
+        display: inline-block;
+        background-color: #cf04be;
+        color: rgba(12,12,12,1);
+    }
+    .aktualnosci>h4{
+        text-align:left;
+        font-size: 3em;
+        margin: 10px;
+        position: relative;
+        padding: 5px 10px;
+        display: inline-block;
+        background-color: #00eeff;
+        color: rgb(15,15,15);
+    }
+    .aktualnosciInside{
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .aktualnosciInside>div{
+        height: 60vh;
+        overflow: hidden;
+        margin: 20px;
+        position: relative;
+    }
+    .aktualnosciInside>div>i{
+        font-size: 5em;
+        color: #00eeff;
+        height: 100%;
+        transform: translateY(40%);
+        display: inline-block;
+    }
+    .media{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .media>div{
+        width: 50%;
+        margin: 50px 50px;
+        padding: 0 50px 0 0;
+    }
+    .media>div:first-child{
+        border-right: 2px solid #00eeff;
+    }
+    .aktualnosciInside>div>i:hover{
+        color: #cf04be;
+        cursor: pointer;
+    }
+    .aktualnosciFB {
+        overflow: hidden;
+        display: inline-block;
+      }
+      
+      .slide-left {
+        transform: translateX(50%);
+      }
+      
+      .slide-right {
+        transform: translateX(-50%);
+      }
+    .social>h4{
+        font-size: 3em;
+    }
+    .mediaSoc{
+        color: #cf04be;
     }
 }
