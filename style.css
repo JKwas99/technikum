@@ -1178,3 +1178,44 @@ header{
         font-size: 25px;
     }
 }
+
+@media (min-width:200px) and (max-width: 800px){
+    .kierunki > div > h3 {
+        margin-bottom: 10px; /* Zmniejsz odstęp między tytułami */
+    }
+    
+    .innowacje > div > h3 {
+        margin-bottom: 15px; /* Zmniejsz odstęp między tytułami */
+    }
+    
+    .innowacje > div > p {
+        margin-top: 10px; /* Zmniejsz odstęp między tytułem a tekstem */
+    }
+    
+    .guys {
+        margin-top: 20px; /* Zmniejsz odstęp między sekcjami */
+    }
+    
+    .kompetencje > div {
+        margin: 20px; /* Zmniejsz margines między sekcjami */
+    }
+    h1 {
+        font-size: 2.5em; /* Zmniejsz rozmiar nagłówków */
+    }
+    
+    h3 {
+        font-size: 1.5em; /* Zmniejsz rozmiar podtytułów */
+    }
+    
+    p {
+        font-size: 1em; /* Zmniejsz rozmiar zwykłego tekstu */
+    }
+    .hamburger {
+        display: block; /* Pokaż przycisk hamburgera na mniejszych ekranach */
+    }
+
+    .menu > ul > img {
+        display: block; /* Pokaż logo na mniejszych ekranach */
+    }        
+
+}
