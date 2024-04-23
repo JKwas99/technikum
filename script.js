@@ -29,6 +29,13 @@ tok.addEventListener("mouseleave", ()=>{
     tik.src = "images/tiktok.svg"
 })
 
+button = document.getElementsByClassName("hamburger")
+sidebar = document.getElementsByClassName("menu-list")
+
+button[0].addEventListener('click', ()=>{
+    button[0].classList.toggle("hamburger-active")
+    sidebar[0].classList.toggle("list-active")
+})
 /*let posty = [
     `<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FTechnikumNewTechnologywZamosciu%2Fposts%2Fpfbid02RJ3WiEJjEVY69Ei3pdGFEHVvRRoRvtXELT9iKFu2689XcNThgXuYFdKEogGjSEFAl&show_text=true&width=500&is_preview=true" width="500" height="800" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>`,
     `<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FTechnikumNewTechnologywZamosciu%2Fposts%2Fpfbid0G3w3zZDFJKTpAiQRLNXs3biosp1x6xghNMRNL5rjptbvVxEY7pQqD7KHiw82qbQGl&show_text=true&width=500&is_preview=true" width="500" height="800" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>`,
