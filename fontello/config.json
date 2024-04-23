@@ -101,6 +101,12 @@
       "css": "instagram-filled",
       "code": 62239,
       "src": "brandico"
+    },
+    {
+      "uid": "598a5f2bcf3521d1615de8e1881ccd17",
+      "css": "clock",
+      "code": 59395,
+      "src": "fontawesome"
     }
   ]
 }

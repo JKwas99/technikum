@@ -985,91 +985,63 @@ header{
     }
     .aktualnosci{
         position: relative;
-        text-align: center;
-        background-image: linear-gradient(
-        -45deg, 
-        transparent 5%, 
-        rgba(59,59,59,1) 5%, 
-        rgba(59,59,59,1) 10%, 
-        transparent 10%, 
-        transparent 15%, 
-        rgb(59, 59, 59) 15%, 
-        rgba(59,59,59,1) 20%,
-        transparent 20%, 
-        transparent 25%,
-        rgba(59,59,59,1) 25%, 
-        rgba(59,59,59,1) 30%,
-        transparent 30%, 
-        transparent 35%,
-        rgb(59, 59, 59) 35%, 
-        rgba(59,59,59,1) 40%,
-        transparent 40%, 
-        transparent 45%,
-        rgba(59,59,59,1) 45%, 
-        rgba(59,59,59,1) 50%,
-        transparent 50%, 
-        transparent 55%, 
-        rgb(59, 59, 59) 55%, 
-        rgba(59,59,59,1) 60%,
-        transparent 60%, 
-        transparent 65%,
-        rgba(59,59,59,1) 65%, 
-        rgba(59,59,59,1) 70%,
-        transparent 70%, 
-        transparent 75%, 
-        rgb(59, 59, 59) 75%, 
-        rgba(59,59,59,1) 80%,
-        transparent 80%, 
-        transparent 85%,
-        rgba(59,59,59,1) 85%, 
-        rgba(59,59,59,1) 90%,
-        transparent 90%, 
-        transparent 95%, 
-        rgb(59, 59, 59) 95%, 
-        rgba(59,59,59,1) 100%
-        )
+        height: 80vh;
+        margin-top: 0;
+        overflow: hidden;
+        /* background: url(images/iphone.svg) center;
+        backface-visibility: hidden; */
     }
-    .aktualnosci>h4::after{
-        content: "Aktualności";
-        text-align: left;
-        left: 0;
-        top: 0;
-        margin: 10px;
-        position: absolute;
-        padding: 5px 10px;
-        display: inline-block;
-        background-color: #cf04be;
-        color: rgba(12,12,12,1);
+    .aktualnosci>div>img{
+        height: 15%;
+        opacity: 80%;
+        transform: translateY(-20px);
     }
-    .aktualnosci>h4{
-        text-align:left;
-        font-size: 3em;
-        margin: 10px;
-        position: relative;
-        padding: 5px 10px;
-        display: inline-block;
-        background-color: #00eeff;
-        color: rgb(15,15,15);
+    .aktualnosci>div>img:hover{
+        filter: contrast(175%) brightness(3%);
     }
-    .aktualnosciInside{
+    @keyframes ruchL {
+        0%{
+            transform: translateX(0);
+        }
+        33%{
+            transform: translateX(10%);
+        }
+        66%{
+            transform: translateX(-10%);
+        }
+        100%{
+            transform: translateX(0);
+        }
+    }
+    @keyframes ruchP {
+        0%{
+            transform: translateX(0);
+        }
+        33%{
+            transform: translateX(-10%);
+        }
+        66%{
+            transform: translateX(10%);
+        }
+        100%{
+            transform: translateX(0);
+        }
+    }
+    .aktualnosci>div:nth-of-type(odd){
+        animation: ruchL;
+        animation-duration: 12s;
+        animation-iteration-count: infinite;
+    }
+    .aktualnosci>div:nth-of-type(even){
+        animation: ruchP;
+        animation-duration: 12s;
+        animation-iteration-count: infinite;
+    }
+    .aktualnosci>div{
         width: 100%;
-        margin-top: 20px;
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-    .aktualnosciInside>div{
-        height: 60vh;
-        overflow: hidden;
-        margin: 20px;
-        position: relative;
-    }
-    .aktualnosciInside>div>i{
-        font-size: 5em;
-        color: #00eeff;
-        height: 100%;
-        transform: translateY(40%);
-        display: inline-block;
     }
     .media{
         display: flex;
@@ -1177,6 +1149,111 @@ header{
         margin: 5px;
         font-size: 25px;
     }
+    .infoAK{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .infoAK>div{
+        width: 300px;
+        height: 300px;
+        margin: 20px;
+    }
+}
+.infoAK>div::before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: rgb(15,15,15);
+    border-radius: 50%;
+    z-index: 12;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.infoAK>div{
+    color: rgb(15,15,15);
+    position: relative;
+    background-image: repeating-linear-gradient(
+        -45deg,
+        #cf04be,
+        #cf04be 30px,
+        #a10694 30px,
+        #a10694 60px
+      );
+    border: 2px solid #cf04bea8;
+    filter: drop-shadow(10px 10px 0px #00ff37);
+}
+.infoAK>div>h3{
+    font-size: 3em;
+    margin: 25px 0 0 0;
+}
+.infoAK>div>p{
+    font-size: 25px;
+    margin: 10px;
+    font-weight: bold;
+}
+.infoAK>div>a:hover{
+    color: #00eeff;
+}
+.infoAK>div>a{
+    font-size: 25px;
+    text-decoration: none;
+    color: #00ff37;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.ak>h4{
+    margin-top: 10px;
+    font-size: 4em;
+    margin-bottom: 10px;
+    filter: drop-shadow(3px 3px 0px #a10694);
+}
+.ak{
+    padding-top: 5px;
+    padding-bottom: 30px;
+    width: 100%;
+    text-align: center;
+    background-image: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 30px,
+        rgb(26, 25, 25) 30px,
+        rgb(26,26,26)60px
+      );
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+}
+footer>div{
+    margin: 10px 20px;
+}
+footer>div>h3{
+    font-size: 25px;
+    color: #00eeff;
+}
+footer>div>p{
+    font-size: 18px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+footer>div>p:hover{
+    color: #00eeff;
+    cursor: pointer;
+}
+footer>div>p>i{
+    color: #a10694;
+    font-size: 21px;
 }
 
 @media (min-width:200px) and (max-width: 800px){
