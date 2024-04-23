@@ -10,67 +10,134 @@ czarny: #0c0c0c
 rozbialy : #FFF7FC
 bialy: #F6F5F2
 */
-body{
-    margin: 0;
-    padding: 50px 0;
-    overflow-x: hidden;
-    width: 100vw;
-    height: 100vh;
-    background: rgb(15,15,15);
-    background: linear-gradient(45deg, rgba(15,15,15,1) 23%, rgba(12,12,12,1) 100%);
-    font-family: "Reem Kufi Fun", sans-serif;
-    color: #F6F5F2;
-    text-align: center;
-    box-sizing: border-box;
+@media (min-width: 700px){
+    body{
+        margin: 0;
+        padding: 50px 0;
+        overflow-x: hidden;
+        width: 100vw;
+        height: 100vh;
+        background: rgb(15,15,15);
+        background: linear-gradient(45deg, rgba(15,15,15,1) 23%, rgba(12,12,12,1) 100%);
+        font-family: "Reem Kufi Fun", sans-serif;
+        color: #F6F5F2;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    h1{
+        font-size: 3em;
+        position: relative;
+        display: inline-block;
+    }
+    h1::before{
+        content: '';
+        width: 10%;
+        height: 2px;
+        background-color: #00ff37;
+        position: absolute;
+        top: 0px;
+        transform: skewY(-5deg) translateX(5px);
+        right: 0px;
+    }
+    h1::after{
+        content: '';
+        width: 15%;
+        transform: skewY(5deg)  translateX(-5px);
+        height: 2px;
+        background-color: #cf04be;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+    }
+    p{
+        letter-spacing: 2px;
+    }
+    a:hover{
+        background-color: blue;
+    }
+    body>a{
+        display: inline-block;
+        width: 30%;
+        height: 50%;
+        font-size: 5em;
+        color: #F6F5F2;
+        text-decoration: none;
+        margin: 20px;
+        background-color: #cf04be;
+    }
+    p>a:hover{
+        background-color: transparent;
+        color: #00ff37;
+    }
+    p>a{
+        color: #cf04be;
+        text-decoration: none;
+        margin: 20px;
+        font-size: 25px;
+    }
 }
-h1{
-    font-size: 3em;
-    position: relative;
-    display: inline-block;
-}
-h1::before{
-    content: '';
-    width: 10%;
-    height: 2px;
-    background-color: #00ff37;
-    position: absolute;
-    top: 0px;
-    transform: skewY(-5deg) translateX(5px);
-    right: 0px;
-}
-h1::after{
-    content: '';
-    width: 15%;
-    transform: skewY(5deg)  translateX(-5px);
-    height: 2px;
-    background-color: #cf04be;
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-}
-p{
-    letter-spacing: 2px;
-}
-a:hover{
-    background-color: blue;
-}
-body>a{
-    display: inline-block;
-    width: 30%;
-    height: 50%;
-    font-size: 5em;
-    color: #F6F5F2;
-    text-decoration: none;
-    margin: 20px;
-    background-color: #cf04be;
-}
-p>a:hover{
-    background-color: transparent;
-    color: #00ff37;
-}
-p>a{
-    color: #cf04be;
-    text-decoration: none;
-    margin: 20px;
-    font-size: 25px;
+@media (max-width: 700px){
+    body{
+        margin: 0;
+        padding: 50px 0;
+        overflow-x: hidden;
+        width: 100vw;
+        background: rgb(15,15,15);
+        background: linear-gradient(45deg, rgba(15,15,15,1) 23%, rgba(12,12,12,1) 100%);
+        font-family: "Reem Kufi Fun", sans-serif;
+        color: #F6F5F2;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    h1{
+        font-size: 3em;
+        position: relative;
+        display: inline-block;
+    }
+    h1::before{
+        content: '';
+        width: 10%;
+        height: 2px;
+        background-color: #00ff37;
+        position: absolute;
+        top: 0px;
+        transform: skewY(-5deg) translateX(5px);
+        right: 0px;
+    }
+    h1::after{
+        content: '';
+        width: 15%;
+        transform: skewY(5deg)  translateX(-5px);
+        height: 2px;
+        background-color: #cf04be;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+    }
+    p{
+        letter-spacing: 2px;
+    }
+    a:hover{
+        background-color: blue;
+    }
+    body>a{
+        display: block;
+        width: 90%;
+        height: 70%;
+        font-size: 5em;
+        color: #F6F5F2;
+        text-decoration: none;
+        margin: 20px;
+        background-color: #cf04be;
+    }
+    p>a:hover{
+        background-color: transparent;
+        color: #00ff37;
+    }
+    p>a{
+        color: #cf04be;
+        text-decoration: none;
+        margin: 20px;
+        font-size: 25px;
+    }
 }
