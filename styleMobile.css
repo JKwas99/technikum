@@ -341,11 +341,12 @@
         opacity: 80%;
         position: relative;
         margin: 20px 5%;
-        background-color: #00ff37;
+        background-color: rgb(15,15,15);
         clip-path: polygon(0% 0, 100% 10%, 100% 100%, 0 90%);
-        background-image: radial-gradient(black 1px, transparent 0);
+        background-image: radial-gradient(#00ff37 1px, transparent 0);
         background-size: 30px 30px;
         background-position: -19px -19px;
+        z-index: 5;
     }
     .guys>.robo>h4{
         font-size: 2em;
@@ -422,11 +423,12 @@
         position: relative;
         opacity: 80%;
         margin: 50px 5%;
-        background-color: #00ff37;
+        background-color: rgb(15,15,15);
         clip-path: polygon(0% 0, 100% 10%, 100% 100%, 0 90%);
-        background-image: radial-gradient(black 1px, transparent 0);
+        background-image: radial-gradient(#00ff37 1px, transparent 0);
         background-size: 30px 30px;
         background-position: -19px -19px;
+        z-index: 5;
     }
     .guys>div>img{
         position: absolute;
