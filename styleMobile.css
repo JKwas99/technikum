@@ -945,7 +945,7 @@
         cursor: pointer;
     }
     .mediaSocial>a>img{
-        height: 25px;
+        height: 20px;
         margin: 10px;
     }
     .mediaSocial>a>i{
@@ -1035,4 +1035,29 @@
             rgb(26,26,26)60px
           );
     }
+footer{
+    width: 100%;
+    margin-top: 30px;
+}
+footer>div{
+    margin: 10px 20px;
+}
+footer>div>h3{
+    font-size: 25px;
+    color: #00eeff;
+}
+footer>div>p{
+    font-size: 18px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+footer>div>p:hover{
+    color: #00eeff;
+    cursor: pointer;
+}
+footer>div>p>i{
+    color: #a10694;
+    font-size: 21px;
+}
 }
